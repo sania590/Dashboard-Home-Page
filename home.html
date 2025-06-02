@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Manager</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/donotChange.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <!-- Header -->
+            <header class="main-header content-wrapper">
+                <div class="header-left">
+                    <a href="#" class="logo-link">
+                        <img src="images/adi-logo.png" alt="ADI.one" class="logo">
+                    </a>
+                </div>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                        <i class="fa-solid fa-xmark clear-icon"></i>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <a href="#" class="icon-item">
+                        <img src="images/icons/lightning_icon.svg" alt="Lightning" class="header-icon">
+                    </a>
+                    <div class="header-divider"></div>
+                    <a href="#" class="icon-item globe-icon">
+                        <img src="images/icons/globe_icon_new.svg" alt="Globe" class="header-icon">
+                    </a>
+                    <a href="#" class="icon-item">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="#" class="icon-item notification-icon">
+                        <i class="fa-regular fa-bell"></i>
+                    </a>
+                    <a href="#" class="icon-item">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="#" class="icon-item cart-icon">
+                        <img src="images/icons/cart_icon.svg" alt="Cart" class="header-icon">
+                        <img src="images/icons/notification_dot.svg" alt="" class="notification-dot">
+                    </a>
+                    <a href="#" class="user-profile">
+                        <div class="profile-circle">
+                            <span>HS</span>
+                        </div>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-container">
+                <!-- Sidebar -->
+                <div class="sidebar" id="sidebar">
+                    <div class="sidebar-menu">
+                        <a href="#" class="menu-item active" data-tooltip="Home">
+                            <img src="images/icons/home_icon.svg" alt="Home" class="menu-icon">
+                            <span>Home</span>
+                        </a>
+                        <a href="#" class="menu-item" data-tooltip="Orders">
+                            <img src="images/icons/orders_icon.svg" alt="Orders" class="menu-icon">
+                            <span>Orders</span>
+                        </a>
+                        <a href="#" class="menu-item " data-tooltip="Menu Manager">
+                            <img src="images/icons/menu_manager_icon.svg" alt="Menu Manager" class="menu-icon">
+                            <span>Menu Manager</span>
+                        </a>
+                        <a href="#" class="menu-item" data-tooltip="Sales">
+                            <img src="images/icons/delivery_icon.svg" alt="Sales" class="menu-icon">
+                            <span>Sales</span>
+                        </a>
+                        <a href="#" class="menu-item" data-tooltip="Ad Insights">
+                            <img src="images/icons/delivery_icon.svg" alt="Ad Insights" class="menu-icon">
+                            <span>Ad Insights</span>
+                        </a>
+                        <a href="#" class="menu-item" data-tooltip="Delivery Partners">
+                            <img src="images/icons/delivery_icon.svg" alt="Delivery Partners" class="menu-icon">
+                            <span>Delivery Partners</span>
+                        </a>
+                        <a href="#" class="menu-item" data-tooltip="Customers">
+                            <img src="images/icons/customers_icon.svg" alt="Customers" class="menu-icon">
+                            <span>Customers</span>
+                        </a>
+                        <a href="#" class="menu-item" data-tooltip="Reports">
+                            <img src="images/icons/reports_icon.svg" alt="Reports" class="menu-icon">
+                            <span>Reports</span>
+                        </a>
+                        <a href="#" class="menu-item" data-tooltip="Manage Website">
+                            <img src="images/icons/manage_website_icon.svg" alt="Manage Website" class="menu-icon">
+                            <span>Manage Website</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Main Content -->
+                <div class="main-content ">
+
+                    <!-- Menu Manager Content -->
+                    <div class="menu-manager-content">
+
+                        <div class="dashboard-header">
+                            <div class="sidebar-button-container">
+                                <button class="open-sidebar-btn" id="openSidebarBtn">
+                                    <img src="images/sidebar-icon.svg" alt="Open Sidebar"
+                                        class="sidebar-icon">&nbsp;&nbsp;&nbsp;Open Sidebar
+                                </button>
+                            </div>
+                            <div class="breadcrumb-nav">
+                                <a href="#" class="breadcrumb-link">Dashboard</a>
+                                <span class="breadcrumb-separator">›</span>
+                                <span class="breadcrumb-current">Menu Manager</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h1>Start writing your code from here</h1>
+                            <h3 class="text-danger">Do not apply any left, right, top, or bottom padding to the main container to maintain consistency.</h3>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Bottom Navigation -->
+        <div class="mobile-bottom-nav">
+            <a href="#" class="bottom-nav-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="#" class="bottom-nav-item">
+                <i class="fa-regular fa-heart"></i>
+            </a>
+            <a href="#" class="bottom-nav-item">
+                <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="#" class="bottom-nav-item">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="#" class="bottom-nav-item">
+                <div class="cart-icon-container">
+                    <img src="images/icons/cart_icon.svg" alt="Cart" class="bottom-nav-icon">
+                    <span class="cart-badge">1</span>
+                </div>
+            </a>
+            <a href="#" class="bottom-nav-item">
+                <div class="profile-circle-small">
+                    <img src="images/Ellipse 271.png" alt="Profile" class="profile-pic">
+                </div>
+            </a>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JS -->
+         <script src="js/donotChangescript.js"></script>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
