@@ -1,2 +1,46 @@
 /* Write all your styling in this style.css */
 
+/* 1.1 Global Resets */
+html {
+    font-size: 16px;
+}
+
+@media (min-width : 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+
+
+/* -----------------------------------------
+  RESPONSIVENESS
+  Please write ALL your responsive code 
+  under this single section only.
+  Avoid spreading media queries throughout 
+  different sections.
+  
+  Guidelines:
+  - Limit the number of breakpoints; use only necessary ones.
+  - Avoid using excessively large margins or paddings,
+    as this often leads to adding unnecessary breakpoints.
+-------------------------------------------- */
+@media (min-width: 576px) {
+    /* Responsive styles here */
+}
+
+@media (min-width: 768px) {
+    /* Responsive styles here */
+}
+
+@media (min-width: 992px) {
+    /* Responsive styles here */
+}
+
+@media (min-width: 1200px) {
+    /* Responsive styles here */
+}
+
+@media (min-width: 1400px) {
+    /* Responsive styles here */
+}

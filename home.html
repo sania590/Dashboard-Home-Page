@@ -128,7 +128,8 @@
                         </div>
                         <div>
                             <h1>Start writing your code from here</h1>
-                            <h3 class="text-danger">Do not apply any left, right, top, or bottom padding to the main container to maintain consistency.</h3>
+                            <h3 class="text-danger">Do not apply any left, right, top, or bottom padding to the main
+                                container to maintain consistency.</h3>
 
                         </div>
 
@@ -168,8 +169,178 @@
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Custom JS -->
-         <script src="js/donotChangescript.js"></script>
+        <script src="js/donotChangescript.js"></script>
         <script src="js/script.js"></script>
+        <script>
+            let data = {
+                "user": {
+                    "id": "user_78901",
+                    "name": "John Delivery",
+                    "email": "john@aadi.one",
+                    "credits": 1245,
+                    "rating": 4.8,
+                    "profileViews": 12,
+                    "todaysEarnings": 64.50
+                },
+
+                "stats": {
+                    "completedToday": {
+                        "count": 30,
+                        "trend": "+12%",
+                        "comparison": "From Yesterday"
+                    },
+                    "earnings": {
+                        "amount": 64.50,
+                        "trend": "+15%",
+                        "comparison": "From Last Week"
+                    },
+                    "avgPayout": {
+                        "amount": 7.85,
+                        "trend": "+5%",
+                        "comparison": "Increase"
+                    },
+                    "customerRating": {
+                        "score": 4.8,
+                        "satisfaction": "92%"
+                    }
+                },
+
+                "newOrders": [
+                    {
+                        "id": "ORD-1202",
+                        "restaurant": {
+                            "name": "Burger Palace",
+                            "distance": "1.2km",
+                            "pickupInstructions": "Use back entrance"
+                        },
+                        "readyIn": "4:23",
+                        "payout": 4.20,
+                        "itemsCount": 3,
+                        "totalAmount": 16.00,
+                        "paymentMethod": "COD",
+                        "status": "pending",
+                        "createdAt": "2023-06-02T11:15:00Z"
+                    },
+                    {
+                        "id": "ORD-1203",
+                        "restaurant": {
+                            "name": "Pizza Hut",
+                            "distance": "0.8km"
+                        },
+                        "readyIn": "2:15",
+                        "payout": 5.50,
+                        "itemsCount": 2,
+                        "totalAmount": 12.50,
+                        "paymentMethod": "paid",
+                        "status": "pending",
+                        "createdAt": "2023-06-02T11:20:00Z"
+                    }
+                ],
+
+                "activeOrders": [
+                    {
+                        "id": "ADI-S872",
+                        "restaurant": {
+                            "name": "Burger Palace",
+                            "distance": "1.2km"
+                        },
+                        "payout": 8.50,
+                        "status": "in_progress",
+                        "pickupTime": "2023-06-02T11:30:00Z",
+                        "deliveryAddress": "123 Main St, Apt 4B"
+                    },
+                    {
+                        "id": "ADI-S873",
+                        "restaurant": {
+                            "name": "Taco Bell",
+                            "distance": "2.1km"
+                        },
+                        "payout": 7.20,
+                        "status": "in_progress",
+                        "pickupTime": "2023-06-02T11:45:00Z",
+                        "deliveryAddress": "456 Oak Ave"
+                    }
+                ],
+
+                "weeklyTrend": {
+                    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                    "data": [18, 22, 25, 27, 30, 35, 28],
+                    "average": 26
+                },
+
+                "creditHistory": [
+                    {
+                        "type": "added",
+                        "amount": 500,
+                        "date": "2023-06-02T08:15:00Z",
+                        "description": "Weekly bonus"
+                    },
+                    {
+                        "type": "deducted",
+                        "amount": 60,
+                        "date": "2023-06-02T10:30:00Z",
+                        "description": "Profile views"
+                    }
+                ],
+
+                "notifications": [
+                    {
+                        "id": "notif_001",
+                        "type": "order_completed",
+                        "title": "Order completed",
+                        "message": "#ORD-7889 • $7.50 added to earnings",
+                        "timestamp": "2023-06-02T10:45:00Z",
+                        "read": false,
+                        "meta": {
+                            "orderId": "ORD-7889",
+                            "amount": 7.50
+                        }
+                    },
+                    {
+                        "id": "notif_002",
+                        "type": "message",
+                        "title": "Burger Palace",
+                        "message": "Please use the back entrance for pickup",
+                        "timestamp": "2023-06-02T11:00:00Z",
+                        "read": false,
+                        "meta": {
+                            "restaurantId": "rest_456"
+                        }
+                    },
+                    {
+                        "id": "notif_003",
+                        "type": "customer_feedback",
+                        "title": "Customer #C-7821",
+                        "message": "Thanks for the quick delivery!",
+                        "timestamp": "2023-06-02T11:05:00Z",
+                        "read": true,
+                        "meta": {
+                            "customerId": "C-7821",
+                            "rating": 5
+                        }
+                    }
+                ],
+
+                "menuItems": [
+                    {
+                        "id": "menu_001",
+                        "name": "Orders",
+                        "icon": "shopping-bag"
+                    },
+                    {
+                        "id": "menu_002",
+                        "name": "Sales",
+                        "icon": "dollar-sign"
+                    },
+                    {
+                        "id": "menu_003",
+                        "name": "Ad Insights",
+                        "icon": "bar-chart"
+                    },
+
+                ]
+            }
+        </script>
 </body>
 
 </html>

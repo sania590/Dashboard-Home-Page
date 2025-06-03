@@ -41,12 +41,29 @@ Your code will be **reviewed and judged** according to these standards.
    - `script.js` should only contain **reusable or conditional code** that is needed globally.
    - avoid using OOPs
 
-3. *** Write Clean Code**  
+3. *** Dynamic & Static Data Versions**
+You are required to deliver two versions of the page:
+
+**Static Version** – Where the data is hardcoded directly into the HTML.
+**Dynamic Version** – Where the data is rendered dynamically using JavaScript.
+
+Mock data has already been added inside the **script** tag of the homepage. While the structure or content may not be 100% accurate, it gives a clear idea of how the data should be organized.
+
+You are free to adjust the mock data as needed to suit the page design, but:
+
+- Use no more than one variable (an array of objects or a single object) to manage all mock data.
+- Do not create multiple scattered data blocks for the same section.
+
+This will help ensure that once real data is fetched from the backend, integration remains seamless and efficient.
+
+
+
+4. *** Write Clean Code**  
    - Use meaningful class names and indentation.
    - Add **clear comments** to explain your logic wherever necessary.
    - Avoid clutter, repetition, and unused code.
 
-4. *** Color Variables (IMPORTANT)**  
+5. *** Color Variables (IMPORTANT)**  
    - **Do NOT create new color variables** in your CSS.  
    - Instead, check the Figma file and use the **exact variable names** that have already been defined in `donotchange.css`.  
    - If a color variable is not defined, use the **exact HEX code** (e.g., `#FDE2E1`) instead of creating a new variable.
