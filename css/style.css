@@ -2,16 +2,8 @@
 
 /* 1.1 Global Resets */
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
-
-@media (min-width : 992px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-
 
 /* -----------------------------------------
   RESPONSIVENESS
@@ -25,22 +17,985 @@ html {
   - Avoid using excessively large margins or paddings,
     as this often leads to adding unnecessary breakpoints.
 -------------------------------------------- */
-@media (min-width: 576px) {
-    /* Responsive styles here */
+
+/* General Styles */
+
+.business-overview {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 11.2px;
+  margin-bottom: 17px;
 }
 
-@media (min-width: 768px) {
-    /* Responsive styles here */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
 }
 
-@media (min-width: 992px) {
-    /* Responsive styles here */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 1rem 0.5rem 1rem;
+  background-color: white;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08); */
+  outline: none;
 }
 
-@media (min-width: 1200px) {
-    /* Responsive styles here */
+.stat-heading {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: var(--color-black);
 }
 
-@media (min-width: 1400px) {
-    /* Responsive styles here */
+.stat-one {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: var(--color-black);
+}
+
+.stat-two {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  color: var(--color-text);
+}
+
+.new-orders-wrapper {
+  display: flex;
+  gap: 13px;
+}
+
+.new-orders-container {
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  flex: 1;
+}
+
+.new-order-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-info-line--one {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.order-id {
+  color: var(--color-primary);
+}
+
+.restaurant {
+  text-wrap: nowrap;
+  color: var(--color-black);
+}
+
+.id-and-restaurant {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.payment-method,
+.payment-method-Paid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27px;
+  border-radius: 20px;
+}
+
+.payment-method-COD {
+  background-color: var(--color-red-light);
+  max-width: 120px;
+}
+
+.payment-method-Paid {
+  background-color: var(--color-green-light);
+  min-width: 48px;
+}
+
+.payment-method-text {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  margin-bottom: 0;
+  text-wrap: nowrap;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.payment-method-text-paid {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  margin-bottom: 0;
+}
+
+.order-info-line--two {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5625rem;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.order-info-line--three {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 19.2px;
+  margin-bottom: 16px;
+  margin-right: 15px;
+}
+
+.order-confirmation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.accept-btn {
+  background-color: var(--color-primary);
+  color: white;
+  min-width: 221px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.accept-btn:hover,
+.decline-btn:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.1s ease-in-out;
+}
+
+.decline-btn {
+  background-color: #e9ecef;
+  font-weight: 400;
+  min-width: 221px;
+  height: 36px;
+  font-size: 16px;
+  line-height: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.weeklyTrend-and-activeOrders {
+  display: flex;
+  gap: 13px;
+  margin-top: 23px;
+}
+
+.weeklyTrend-container {
+  flex: 1;
+  background: white;
+  padding-top: 1.375rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+.weeklyTrend-heading,
+.active-orders-heading,
+.recent-notification-heading,
+.messages-heading {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding-left: 0.5625rem;
+  padding-right: 1.1875rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-left: 26px;
+  padding-bottom: 0.9375rem;
+}
+
+.horizontal-line,
+.horizontal-line-2 {
+  width: 100%;
+  border: 0.0625rem solid rgba(232, 232, 232, 1);
+}
+
+.weekly-delivery-trend {
+  width: 520px;
+  height: 310px;
+  padding-top: 1.125rem;
+  padding-left: 1.5625rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.active-orders {
+  flex: 1;
+  background: white;
+  padding-top: 1.375rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.active-order-text-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-all-btn-2 {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--color-link);
+  background: transparent;
+  border: none;
+  margin-right: 1.875rem;
+}
+
+.active-orders-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-weight: 400;
+  margin-left: 0;
+  font-size: 1.125rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-top: 1.8125rem;
+  padding-bottom: 1.3125rem;
+  padding-right: 27px;
+  padding-left: 30px;
+}
+.active-restaurant-distance {
+  display: flex;
+  width: 100%;
+  margin-left: 0%;
+  gap: 56px;
+}
+
+.x-entity {
+  font-size: small;
+}
+
+.credits {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  background: linear-gradient(270deg, #12306d 0%, #1871db 100%);
+  border-radius: 0.3125rem;
+  margin-top: 1.8125rem;
+  padding: 1.9375rem 1.5625rem 1.1875rem 1.5625rem;
+}
+
+.available-credits {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  padding-bottom: 8px;
+}
+
+.credits-amount {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  padding-bottom: 0.1875rem;
+}
+
+.credits-added {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.buy-credits-btn {
+  background-color: white;
+  width: 6.1875rem;
+  height: 1.9375rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: none;
+  border-radius: 5px;
+  margin-left: 46.5%;
+  margin-bottom: 1.125rem;
+}
+
+.profile-views {
+  color: white;
+  text-align: right;
+  text-wrap: nowrap;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.credits-deducted {
+  color: white;
+  text-align: right;
+  text-wrap: nowrap;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.notifications-messages {
+  display: flex;
+  gap: 13px;
+  margin-top: 23px;
+}
+
+.recent-notifications,
+.messages {
+  flex: 1;
+  height: 21.775rem;
+  background: white;
+  padding-top: 1.375rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+}
+
+.notification-details {
+  padding: 0.75rem 0 0.8125rem 1.1875rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.order-status {
+  font-weight: 700;
+  font-size: 1rem;
+  height: 19px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-id-n,
+.added-earnings,
+.message-received {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notification-time,
+.messages-time {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(117, 119, 122, 1);
+}
+
+.messages-details {
+  padding: 0.75rem 0 0.8125rem 1.1875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.6px;
+  max-width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sender {
+  font-weight: 700;
+  height: 19px;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#weeklyChartECharts {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-out;
+}
+.modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+  display: flex;
+
+  opacity: 0; /* Start hidden for transition */
+  visibility: hidden; /* Prevent interaction when hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.close-button {
+  color: white;
+  text-align: end;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-right: 10px;
+  transition: color 0.2s ease;
+}
+/* Tablet responsive styles */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  .new-orders-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .new-orders-heading {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+  .credits-heading {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 34px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  .new-order--cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.0625rem;
+    margin-bottom: 0.75rem;
+  }
+  .view-all-btn {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-link);
+    background: transparent;
+    border: none;
+  }
+  .new-order-details {
+    padding: 10px; /* Reduce internal card padding */
+    gap: 8px; /* Reduce gap between detail lines */
+  }
+  .payment-method-COD,
+  .payment-method-Paid {
+    display: flex;
+    min-width: 70px;
+    height: 1rem;
+    padding: 0px 5px 0px 5px;
+    font-size: 8px;
+    min-width: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+  .weeklyTrend-and-activeOrders,
+  .notifications-messages {
+    flex-direction: column; /* Stack elements vertically on tablets */
+  }
+
+  .weekly-delivery-trend {
+    width: 100%; /* Adjust chart width for tablets */
+    height: 280px; /* Adjust chart height for tablets */
+    padding-left: 0; /* Remove extra padding */
+  }
+
+  .order-info-line--three {
+    gap: 150px; /* Adjust gap for better layout on tablets */
+  }
+
+  .accept-btn,
+  .decline-btn {
+    min-width: unset; /* Remove min-width to allow content-based sizing */
+    width: 48%; /* Adjust button width */
+  }
+
+  .buy-credits-btn {
+    margin-left: 21%; /* Center button */
+    margin-right: auto; /* Center button */
+    width: 80%; /* Make button wider */
+  }
+
+  .credits {
+    flex-direction: row; /* Keep credits section as a row on tablets */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+  }
+
+  .credits-amount,
+  .credits-added {
+    padding-left: 0; /* Remove extra padding */
+  }
+
+  .recent-notifications,
+  .messages {
+    height: auto; /* Allow height to adjust based on content */
+  }
+}
+
+/* Mobile responsive styles */
+
+@media (max-width: 768px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 1rem 0.5rem 1rem;
+    background-color: white;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+    outline: none;
+  }
+
+  .stat-heading {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 100%;
+    color: var(--color-black);
+  }
+
+  .stat-one {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: var(--color-black);
+  }
+
+  .stat-two {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: var(--color-text);
+  }
+
+  .new-orders-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 5px;
+  }
+
+  .new-orders-heading {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 100%;
+  }
+
+  .view-all-btn,
+  .view-all-btn-2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-link);
+    background: transparent;
+    border: none;
+  }
+
+  .view-all-btn-2 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .new-order--cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.0625rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .new-order-details {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .order-id,
+  .restaurant {
+    font-size: 0.8125rem;
+  }
+
+  .payment-method-COD,
+  .payment-method-Paid {
+    display: flex;
+    width: 70px;
+    height: 1rem;
+    padding: 0px 5px 0px 5px;
+    font-size: 8px;
+    min-width: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  .payment-method-text,
+  .payment-method-text-paid {
+    font-size: 8px;
+  }
+
+  .order-info-line--one {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+
+  .order-info-line--two {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+
+  .order-info-line--three {
+    font-size: 12px;
+    margin-left: 0;
+    gap: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .order-info-line--two > img {
+    width: 2px;
+    height: 2.5px;
+    margin: 0 1px;
+  }
+
+  .order-confirmation {
+    gap: 5px;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .accept-btn,
+  .decline-btn {
+    min-width: unset;
+    flex: 1;
+    font-size: 13px;
+    padding: 0.35rem 0.6rem;
+    height: 35px;
+  }
+
+  .weeklyTrend-and-activeOrders {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 23px;
+  }
+
+  .weeklyTrend-container {
+    flex: 1;
+    background: white;
+    padding-top: 1.375rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .weeklyTrend-heading {
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding-left: 26px;
+    padding-right: 1.1875rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding-bottom: 0.9375rem;
+  }
+
+  .weekly-delivery-trend {
+    width: 100%;
+    height: 280px;
+    padding-top: 1.125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all 0s ease-out;
+  }
+
+  .active-orders {
+    flex: 1;
+    padding-top: 1.375rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  .active-orders-heading,
+  .credits-heading {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  .active-orders-heading {
+    text-transform: capitalize;
+    padding-left: 5px;
+    padding-right: 1.1875rem;
+  }
+
+  .active-order-text-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .active-orders-details {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    align-items: center;
+    padding-left: 14px;
+    padding-right: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    margin-bottom: 11px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+    background: white;
+  }
+
+  .active-restaurant-distance {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .active-orders-price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+
+  .credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(270deg, #12306d 0%, #1871db 100%);
+    border-radius: 0.3125rem;
+    margin-top: 1.8125rem;
+    padding: 1.9375rem 1.5625rem 7px 1.5625rem;
+  }
+
+  .credits-amount,
+  .credits-added {
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    text-align: center;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .credits-amount {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .credits-added {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .buy-credits-btn {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17.75rem;
+    height: 1.9375rem;
+  }
+
+  /* Hidden elements */
+  .available-credits,
+  .profile-views,
+  .credits-deducted,
+  .horizontal-line-2,
+  .recent-notifications,
+  .messages {
+    display: none;
+  }
+
+  .x-entity {
+    font-size: small;
+  }
+}
+/* Desktop responsive styles */
+@media (min-width: 1101px) {
+  .new-orders-heading {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+  .view-all-btn {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-link);
+    background: transparent;
+    border: none;
+    margin-right: 1.875rem;
+  }
+  .new-order--cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.0625rem;
+  }
+  .new-orders-container {
+    margin-top: 32px;
+    min-height: 201px;
+    padding: 1.625rem;
+  }
+
+  .order-info-line--one {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+  }
+  .order-id {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+  }
+  .restaurant {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+  }
+  .id-and-restaurant {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 12px;
+  }
+  .payment-method-COD {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    border-radius: 20px;
+    padding: 10px 6px 10px 6px;
+  }
+  #weeklyChartECharts:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    z-index: 2000;
+    background-color: white;
+    transform: scale(1.05);
+    height: 292px;
+    outline: #1871db solid 1px;
+    transform: translateY(-3px);
+  }
+
+  .stat-card:hover {
+    transform: scale(1.02);
+    outline: var(--color-primary) solid 2px;
+    opacity: 0.9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+    transition: all 0.1s ease-in-out;
+  }
+  .active-orders {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  }
+  .credits-heading {
+    display: none;
+  }
+  .buy-credits-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+    transition: all 0.1s ease-in-out;
+  }
 }

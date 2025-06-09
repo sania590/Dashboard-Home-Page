@@ -1,346 +1,868 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu Manager</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/donotChange.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
+    <link rel="stylesheet" href="css/donotChange.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+  </head>
+  <body>
     <div class="container-fluid p-0">
-        <div class="row g-0">
-            <!-- Header -->
-            <header class="main-header content-wrapper">
-                <div class="header-left">
-                    <a href="#" class="logo-link">
-                        <img src="images/adi-logo.png" alt="ADI.one" class="logo">
-                    </a>
-                </div>
-                <div class="search-container">
-                    <div class="search-box">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search">
-                        <i class="fa-solid fa-xmark clear-icon"></i>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <a href="#" class="icon-item">
-                        <img src="images/icons/lightning_icon.svg" alt="Lightning" class="header-icon">
-                    </a>
-                    <div class="header-divider"></div>
-                    <a href="#" class="icon-item globe-icon">
-                        <img src="images/icons/globe_icon_new.svg" alt="Globe" class="header-icon">
-                    </a>
-                    <a href="#" class="icon-item">
-                        <i class="fa-regular fa-heart"></i>
-                    </a>
-                    <a href="#" class="icon-item notification-icon">
-                        <i class="fa-regular fa-bell"></i>
-                    </a>
-                    <a href="#" class="icon-item">
-                        <i class="fa-regular fa-envelope"></i>
-                    </a>
-                    <a href="#" class="icon-item cart-icon">
-                        <img src="images/icons/cart_icon.svg" alt="Cart" class="header-icon">
-                        <img src="images/icons/notification_dot.svg" alt="" class="notification-dot">
-                    </a>
-                    <a href="#" class="user-profile">
-                        <div class="profile-circle">
-                            <span>HS</span>
-                        </div>
-                    </a>
-                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </header>
-
-            <div class="content-container">
-                <!-- Sidebar -->
-                <div class="sidebar" id="sidebar">
-                    <div class="sidebar-menu">
-                        <a href="#" class="menu-item active" data-tooltip="Home">
-                            <img src="images/icons/home_icon.svg" alt="Home" class="menu-icon">
-                            <span>Home</span>
-                        </a>
-                        <a href="#" class="menu-item" data-tooltip="Orders">
-                            <img src="images/icons/orders_icon.svg" alt="Orders" class="menu-icon">
-                            <span>Orders</span>
-                        </a>
-                        <a href="#" class="menu-item " data-tooltip="Menu Manager">
-                            <img src="images/icons/menu_manager_icon.svg" alt="Menu Manager" class="menu-icon">
-                            <span>Menu Manager</span>
-                        </a>
-                        <a href="#" class="menu-item" data-tooltip="Sales">
-                            <img src="images/icons/delivery_icon.svg" alt="Sales" class="menu-icon">
-                            <span>Sales</span>
-                        </a>
-                        <a href="#" class="menu-item" data-tooltip="Ad Insights">
-                            <img src="images/icons/delivery_icon.svg" alt="Ad Insights" class="menu-icon">
-                            <span>Ad Insights</span>
-                        </a>
-                        <a href="#" class="menu-item" data-tooltip="Delivery Partners">
-                            <img src="images/icons/delivery_icon.svg" alt="Delivery Partners" class="menu-icon">
-                            <span>Delivery Partners</span>
-                        </a>
-                        <a href="#" class="menu-item" data-tooltip="Customers">
-                            <img src="images/icons/customers_icon.svg" alt="Customers" class="menu-icon">
-                            <span>Customers</span>
-                        </a>
-                        <a href="#" class="menu-item" data-tooltip="Reports">
-                            <img src="images/icons/reports_icon.svg" alt="Reports" class="menu-icon">
-                            <span>Reports</span>
-                        </a>
-                        <a href="#" class="menu-item" data-tooltip="Manage Website">
-                            <img src="images/icons/manage_website_icon.svg" alt="Manage Website" class="menu-icon">
-                            <span>Manage Website</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Main Content -->
-                <div class="main-content ">
-
-                    <!-- Menu Manager Content -->
-                    <div class="menu-manager-content">
-
-                        <div class="dashboard-header">
-                            <div class="sidebar-button-container">
-                                <button class="open-sidebar-btn" id="openSidebarBtn">
-                                    <img src="images/sidebar-icon.svg" alt="Open Sidebar"
-                                        class="sidebar-icon">&nbsp;&nbsp;&nbsp;Open Sidebar
-                                </button>
-                            </div>
-                            <div class="breadcrumb-nav">
-                                <a href="#" class="breadcrumb-link">Dashboard</a>
-                                <span class="breadcrumb-separator">›</span>
-                                <span class="breadcrumb-current">Menu Manager</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h1>Start writing your code from here</h1>
-                            <h3 class="text-danger">Do not apply any left, right, top, or bottom padding to the main
-                                container to maintain consistency.</h3>
-
-                        </div>
-
-
-                    </div>
-                </div>
+      <div class="row g-0">
+        <!-- Header -->
+        <header class="main-header content-wrapper">
+          <div class="header-left">
+            <a href="#" class="logo-link">
+              <img src="images/adi-logo.png" alt="ADI.one" class="logo" />
+            </a>
+          </div>
+          <div class="search-container">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search" />
+              <i class="fa-solid fa-xmark clear-icon"></i>
             </div>
-        </div>
+          </div>
+          <div class="header-right">
+            <a href="#" class="icon-item">
+              <img src="images/icons/lightning_icon.svg" alt="Lightning" class="header-icon" />
+            </a>
+            <div class="header-divider"></div>
+            <a href="#" class="icon-item globe-icon">
+              <img src="images/icons/globe_icon_new.svg" alt="Globe" class="header-icon" />
+            </a>
+            <a href="#" class="icon-item">
+              <i class="fa-regular fa-heart"></i>
+            </a>
+            <a href="#" class="icon-item notification-icon">
+              <i class="fa-regular fa-bell"></i>
+            </a>
+            <a href="#" class="icon-item">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="#" class="icon-item cart-icon">
+              <img src="images/icons/cart_icon.svg" alt="Cart" class="header-icon" />
+              <img src="images/icons/notification_dot.svg" alt="" class="notification-dot" />
+            </a>
+            <a href="#" class="user-profile">
+              <div class="profile-circle">
+                <span>HS</span>
+              </div>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </header>
 
-        <!-- Mobile Bottom Navigation -->
-        <div class="mobile-bottom-nav">
-            <a href="#" class="bottom-nav-item">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <a href="#" class="bottom-nav-item">
-                <i class="fa-regular fa-heart"></i>
-            </a>
-            <a href="#" class="bottom-nav-item">
-                <i class="fa-regular fa-bell"></i>
-            </a>
-            <a href="#" class="bottom-nav-item">
-                <i class="fa-regular fa-envelope"></i>
-            </a>
-            <a href="#" class="bottom-nav-item">
-                <div class="cart-icon-container">
-                    <img src="images/icons/cart_icon.svg" alt="Cart" class="bottom-nav-icon">
-                    <span class="cart-badge">1</span>
+        <div class="content-container">
+          <!-- Sidebar -->
+          <div class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+              <a href="#" class="menu-item active" data-tooltip="Home">
+                <img src="images/icons/home_icon.svg" alt="Home" class="menu-icon" />
+                <span>Home</span>
+              </a>
+              <a href="#" class="menu-item" data-tooltip="Orders">
+                <img src="images/icons/orders_icon.svg" alt="Orders" class="menu-icon" />
+                <span>Orders</span>
+              </a>
+              <a href="#" class="menu-item" data-tooltip="Menu Manager">
+                <img src="images/icons/menu_manager_icon.svg" alt="Menu Manager" class="menu-icon" />
+                <span>Menu Manager</span>
+              </a>
+              <a href="#" class="menu-item" data-tooltip="Sales">
+                <img src="images/icons/delivery_icon.svg" alt="Sales" class="menu-icon" />
+                <span>Sales</span>
+              </a>
+              <a href="#" class="menu-item" data-tooltip="Ad Insights">
+                <img src="images/icons/delivery_icon.svg" alt="Ad Insights" class="menu-icon" />
+                <span>Ad Insights</span>
+              </a>
+              <a href="#" class="menu-item" data-tooltip="Delivery Partners">
+                <img src="images/icons/delivery_icon.svg" alt="Delivery Partners" class="menu-icon" />
+                <span>Delivery Partners</span>
+              </a>
+              <a href="#" class="menu-item" data-tooltip="Customers">
+                <img src="images/icons/customers_icon.svg" alt="Customers" class="menu-icon" />
+                <span>Customers</span>
+              </a>
+              <a href="#" class="menu-item" data-tooltip="Reports">
+                <img src="images/icons/reports_icon.svg" alt="Reports" class="menu-icon" />
+                <span>Reports</span>
+              </a>
+              <a href="#" class="menu-item" data-tooltip="Manage Website">
+                <img src="images/icons/manage_website_icon.svg" alt="Manage Website" class="menu-icon" />
+                <span>Manage Website</span>
+              </a>
+            </div>
+          </div>
+          <!-- Main Content -->
+          <div class="main-content">
+            <!-- Menu Manager Content -->
+            <div class="menu-manager-content">
+              <div class="dashboard-header">
+                <div class="sidebar-button-container">
+                  <button class="open-sidebar-btn" id="openSidebarBtn">
+                    <img src="images/sidebar-icon.svg" alt="Open Sidebar" class="sidebar-icon" />
+                    &nbsp;&nbsp;&nbsp;Open Sidebar
+                  </button>
                 </div>
-            </a>
-            <a href="#" class="bottom-nav-item">
-                <div class="profile-circle-small">
-                    <img src="images/Ellipse 271.png" alt="Profile" class="profile-pic">
+                <div class="breadcrumb-nav">
+                  <a href="#" class="breadcrumb-link">Dashboard</a>
+                  <span class="breadcrumb-separator">›</span>
+                  <span class="breadcrumb-current">Menu Manager</span>
                 </div>
-            </a>
+              </div>
+
+              <!-- Business Overview section -->
+
+              <h1 class="business-overview">Business Overview</h1>
+              <section class="stats-container">
+                <div class="stat-card">
+                  <h1 class="stat-heading">COMPLETED TODAY</h1>
+                  <p class="stat-one" id="completed-today-count">30</p>
+                  <p class="stat-two" id="completed-today-trend-comparison">+12% From Yesterday</p>
+                </div>
+                <div class="stat-card">
+                  <h1 class="stat-heading">EARNINGS</h1>
+                  <p class="stat-one" id="earnings-amount">$64.50</p>
+                  <p class="stat-two" id="earnings-trend-comparison">+15% From Last Week</p>
+                </div>
+                <div class="stat-card">
+                  <h1 class="stat-heading">AVG. PAYOUT</h1>
+                  <p class="stat-one" id="avgPayout-amount">$7.85</p>
+                  <p class="stat-two" id="avgPayout-trend-comparison">+5% Increase</p>
+                </div>
+                <div class="stat-card">
+                  <h1 class="stat-heading">CUSTOMER RATING</h1>
+                  <p class="stat-one" id="customer-rating-score">4.8</p>
+                  <p class="stat-two" id="customer-rating-satisfaction">92% Satisfaction</p>
+                </div>
+              </section>
+
+              <!-- New Orders sections -->
+
+              <div class="new-order--cta">
+                <h1 class="new-orders-heading">New Orders</h1>
+                <button class="view-all-btn">View All</button>
+              </div>
+              <section class="new-orders-wrapper" id="new-orders"></section>
+
+              <!-- Weekly Delivery Trend and Active Orders -->
+
+              <section class="weeklyTrend-and-activeOrders">
+                <div class="weeklyTrend-container">
+                  <h1 class="weeklyTrend-heading">Weekly Delivery Trend</h1>
+                  <div class="horizontal-line"></div>
+                  <div class="weekly-delivery-trend">
+                    <div id="weeklyChartECharts"></div>
+                  </div>
+                </div>
+
+                <!-- Active Orders section -->
+
+                <section class="active-orders">
+                  <div class="active-order-text-btn">
+                    <h1 class="active-orders-heading">Active Orders</h1>
+                    <button class="view-all-btn-2">View All</button>
+                  </div>
+                  <div class="active-orders-container" id="active-orders"></div>
+                </section>
+              </section>
+
+              <!-- Available Credits section -->
+              <h1 class="credits-heading">Available Credits</h1>
+              <section class="credits">
+                <div class="credit-details">
+                  <div class="available-credits">AVAILABLE CREDITS</div>
+                  <div class="credits-amount">1,245</div>
+                  <div class="credits-added">+500 credits added today</div>
+                </div>
+                <div class="credit-details">
+                  <button class="buy-credits-btn">Buy Credits</button>
+                  <div class="profile-views">Profile Views</div>
+                  <div class="credits-deducted">12<span class="x-entity">&#10005;</span> (60 credits deducted)</div>
+                </div>
+              </section>
+
+              <!-- Notifications and Messages section -->
+              <section class="notifications-messages">
+                <div class="recent-notifications">
+                  <h1 class="recent-notification-heading">Recent Notifications</h1>
+                  <div id="notification-wrapper"></div>
+                </div>
+
+                <div class="messages">
+                  <h1 class="messages-heading">Messages</h1>
+                  <div id="message-wrapper"></div>
+                </div>
+              </section>
+
+              <!-- Modal-->
+              <div id="myModal" class="modal-overlay">
+                <div class="modal-content">
+                  <span class="close-button">&times;</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Custom JS -->
-        <script src="js/donotChangescript.js"></script>
-        <script src="js/script.js"></script>
-        <script>
-            let data = {
-                "user": {
-                    "id": "user_78901",
-                    "name": "John Delivery",
-                    "email": "john@aadi.one",
-                    "credits": 1245,
-                    "rating": 4.8,
-                    "profileViews": 12,
-                    "todaysEarnings": 64.50
-                },
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+      <a href="#" class="bottom-nav-item">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <i class="fa-regular fa-heart"></i>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <i class="fa-regular fa-bell"></i>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <div class="cart-icon-container">
+          <img src="images/icons/cart_icon.svg" alt="Cart" class="bottom-nav-icon" />
+          <span class="cart-badge">1</span>
+        </div>
+      </a>
+      <a href="#" class="bottom-nav-item">
+        <div class="profile-circle-small">
+          <img src="images/Ellipse 271.png" alt="Profile" class="profile-pic" />
+        </div>
+      </a>
+    </div>
 
-                "stats": {
-                    "completedToday": {
-                        "count": 30,
-                        "trend": "+12%",
-                        "comparison": "From Yesterday"
-                    },
-                    "earnings": {
-                        "amount": 64.50,
-                        "trend": "+15%",
-                        "comparison": "From Last Week"
-                    },
-                    "avgPayout": {
-                        "amount": 7.85,
-                        "trend": "+5%",
-                        "comparison": "Increase"
-                    },
-                    "customerRating": {
-                        "score": 4.8,
-                        "satisfaction": "92%"
-                    }
-                },
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/donotChangescript.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      let data = {
+        user: {
+          id: 'user_78901',
+          name: 'John Delivery',
+          email: 'john@aadi.one',
+          credits: 1245,
+          rating: 4.8,
+          profileViews: 12,
+          todaysEarnings: 64.5,
+        },
 
-                "newOrders": [
-                    {
-                        "id": "ORD-1202",
-                        "restaurant": {
-                            "name": "Burger Palace",
-                            "distance": "1.2km",
-                            "pickupInstructions": "Use back entrance"
-                        },
-                        "readyIn": "4:23",
-                        "payout": 4.20,
-                        "itemsCount": 3,
-                        "totalAmount": 16.00,
-                        "paymentMethod": "COD",
-                        "status": "pending",
-                        "createdAt": "2023-06-02T11:15:00Z"
-                    },
-                    {
-                        "id": "ORD-1203",
-                        "restaurant": {
-                            "name": "Pizza Hut",
-                            "distance": "0.8km"
-                        },
-                        "readyIn": "2:15",
-                        "payout": 5.50,
-                        "itemsCount": 2,
-                        "totalAmount": 12.50,
-                        "paymentMethod": "paid",
-                        "status": "pending",
-                        "createdAt": "2023-06-02T11:20:00Z"
-                    }
-                ],
+        stats: {
+          completedToday: {
+            count: 45,
+            trend: '+14%',
+            comparison: 'From Monday',
+          },
+          earnings: {
+            amount: 64.5,
+            trend: '+15%',
+            comparison: 'From Last Week',
+          },
+          avgPayout: {
+            amount: 8.85,
+            trend: '+8%',
+            comparison: 'Decrease',
+          },
+          customerRating: {
+            score: 4.2,
+            satisfaction: '95%',
+          },
+        },
 
-                "activeOrders": [
-                    {
-                        "id": "ADI-S872",
-                        "restaurant": {
-                            "name": "Burger Palace",
-                            "distance": "1.2km"
-                        },
-                        "payout": 8.50,
-                        "status": "in_progress",
-                        "pickupTime": "2023-06-02T11:30:00Z",
-                        "deliveryAddress": "123 Main St, Apt 4B"
-                    },
-                    {
-                        "id": "ADI-S873",
-                        "restaurant": {
-                            "name": "Taco Bell",
-                            "distance": "2.1km"
-                        },
-                        "payout": 7.20,
-                        "status": "in_progress",
-                        "pickupTime": "2023-06-02T11:45:00Z",
-                        "deliveryAddress": "456 Oak Ave"
-                    }
-                ],
+        newOrders: [
+          {
+            id: 'ORD-1202',
+            restaurant: {
+              name: 'Burger Palace',
+              distance: '1.2km',
+              pickupInstructions: 'Use back entrance',
+            },
+            readyIn: '4:23',
+            payout: 4.2,
+            itemsCount: 3,
+            totalAmount: 16.0,
+            paymentMethod: 'COD',
+            status: 'pending',
+            createdAt: '2023-06-02T11:15:00Z',
+          },
+          {
+            id: 'ORD-1203',
+            restaurant: {
+              name: 'Pizza Hut',
+              distance: '0.8km',
+            },
+            readyIn: '2:15',
+            payout: 5.5,
+            itemsCount: 2,
+            totalAmount: 12.5,
+            paymentMethod: 'Paid',
+            status: 'pending',
+            createdAt: '2023-06-02T11:20:00Z',
+          },
+        ],
 
-                "weeklyTrend": {
-                    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-                    "data": [18, 22, 25, 27, 30, 35, 28],
-                    "average": 26
-                },
+        activeOrders: [
+          {
+            id: 'ADI-S872',
+            restaurant: {
+              name: 'Burger Palace',
+              distance: '1.2km',
+            },
+            payout: 10.5,
+            status: 'in_progress',
+            pickupTime: '2023-06-02T11:30:00Z',
+            deliveryAddress: '123 Main St, Apt 4B',
+          },
+          {
+            id: 'ADI-S873',
+            restaurant: {
+              name: 'Taco Bell',
+              distance: '2.1km',
+            },
+            payout: 7.2,
+            status: 'in_progress',
+            pickupTime: '2023-06-02T11:45:00Z',
+            deliveryAddress: '456 Oak Ave',
+          },
+          {
+            id: 'ADI-S874',
+            restaurant: {
+              name: 'Curry House',
+              distance: '3.5km',
+            },
+            payout: 9.8,
+            status: 'in_progress',
+            pickupTime: '2023-06-02T12:00:00Z',
+            deliveryAddress: '789 Pine Ln, Unit 1A',
+          },
+          {
+            id: 'ADI-S875',
+            restaurant: {
+              name: 'Sushi Zen',
+              distance: '0.5km',
+            },
+            payout: 6.0,
+            status: 'in_progress',
+            pickupTime: '2023-06-02T12:10:00Z',
+            deliveryAddress: '101 Cedar Rd',
+          },
+        ],
 
-                "creditHistory": [
-                    {
-                        "type": "added",
-                        "amount": 500,
-                        "date": "2023-06-02T08:15:00Z",
-                        "description": "Weekly bonus"
-                    },
-                    {
-                        "type": "deducted",
-                        "amount": 60,
-                        "date": "2023-06-02T10:30:00Z",
-                        "description": "Profile views"
-                    }
-                ],
+        weeklyTrend: {
+          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: [10, 15, 18, 8, 34, 23, 22],
+          average: 26,
+        },
 
-                "notifications": [
-                    {
-                        "id": "notif_001",
-                        "type": "order_completed",
-                        "title": "Order completed",
-                        "message": "#ORD-7889 • $7.50 added to earnings",
-                        "timestamp": "2023-06-02T10:45:00Z",
-                        "read": false,
-                        "meta": {
-                            "orderId": "ORD-7889",
-                            "amount": 7.50
-                        }
-                    },
-                    {
-                        "id": "notif_002",
-                        "type": "message",
-                        "title": "Burger Palace",
-                        "message": "Please use the back entrance for pickup",
-                        "timestamp": "2023-06-02T11:00:00Z",
-                        "read": false,
-                        "meta": {
-                            "restaurantId": "rest_456"
-                        }
-                    },
-                    {
-                        "id": "notif_003",
-                        "type": "customer_feedback",
-                        "title": "Customer #C-7821",
-                        "message": "Thanks for the quick delivery!",
-                        "timestamp": "2023-06-02T11:05:00Z",
-                        "read": true,
-                        "meta": {
-                            "customerId": "C-7821",
-                            "rating": 5
-                        }
-                    }
-                ],
+        creditHistory: [
+          {
+            available: 1349,
+          },
+          {
+            type: 'added',
+            amount: 800,
+            date: '2023-06-02T08:15:00Z',
+            description: 'Weekly bonus',
+          },
+          {
+            type: 'deducted',
+            amount: 90,
+            date: '2023-06-02T10:30:00Z',
+            description: 'Profile views',
+          },
+        ],
 
-                "menuItems": [
-                    {
-                        "id": "menu_001",
-                        "name": "Orders",
-                        "icon": "shopping-bag"
-                    },
-                    {
-                        "id": "menu_002",
-                        "name": "Sales",
-                        "icon": "dollar-sign"
-                    },
-                    {
-                        "id": "menu_003",
-                        "name": "Ad Insights",
-                        "icon": "bar-chart"
-                    },
+        notifications: [
+          {
+            id: 'notif_001',
+            type: 'order_completed',
+            title: 'Order completed',
+            message: '#ORD-7889 • $7.50 added to earnings',
+            time: 23,
+            timestamp: '2023-06-02T10:45:00Z',
+            read: false,
+            meta: {
+              orderId: 'ORD-7889',
+              amount: 7.5,
+            },
+          },
+          {
+            id: 'notif_006',
+            type: 'shipping_update',
+            title: 'Your order has shipped!',
+            message: 'Good news! Your order #ORD-7912 has shipped and is expected to arrive by June 10, 2025.',
+            time: 30,
+            timestamp: '2025-06-08T08:00:00Z',
+            read: false,
+            meta: {
+              orderId: 'ORD-7912',
+              amount: 45.99,
+            },
+          },
+          {
+            id: 'notif_007',
+            type: 'new_review',
+            title: " This is an exceptionally long sentence that is specifically designed to thoroughly test the single-line ellipsis functionality within its constrained container. When the container's width is insufficient, this text should gracefully truncate, ending with an ellipsis to indicate hidden content. Try resizing your browser window or changing the  in the CSS to observe the behavior",
+            message: 'You received a 5-star review on your recent service for order #ORD-7913. Check it out!',
+            time: 90,
+            timestamp: '2025-06-08T07:30:00Z',
+            read: false,
+            meta: {
+              orderId: 'ORD-7913',
+              amount: 12.0,
+            },
+          },
+          {
+            id: 'notif_002',
+            type: 'message',
+            time: 15,
+            title: 'Burger Palace',
+            message: 'Please use the back entrance for pickup',
+            timestamp: '2023-06-02T11:00:00Z',
+            read: false,
+            meta: {
+              restaurantId: 'rest_456',
+            },
+          },
+          {
+            id: 'notif_003',
+            type: 'customer_feedback',
+            time: 35,
+            title: 'Customer #C-7821',
+            message: 'Thanks for the quick delivery!',
+            timestamp: '2023-06-02T11:05:00Z',
+            read: true,
+            meta: {
+              customerId: 'C-7821',
+              rating: 5,
+            },
+          },
+          {
+            id: 'notif_008',
+            type: 'new_feature_alert',
+            time: 10,
+            title: 'Amazing Service',
+            message: "           This is an exceptionally long sentence that is specifically designed to thoroughly test the single-line ellipsis functionality within its constrained container. When the container's width is insufficient, this text should gracefully truncate, ending with an ellipsis to indicate hidden content. Try resizing your browser window or changing the  in the CSS to observe the behavior",
+            timestamp: '2025-06-08T05:15:00Z',
+            read: false,
+            meta: {
+              customerId: 'C-9999',
+              rating: 4,
+            },
+          },
+        ],
 
-                ]
-            }
-        </script>
-</body>
+        menuItems: [
+          {
+            id: 'menu_001',
+            name: 'Orders',
+            icon: 'shopping-bag',
+          },
+          {
+            id: 'menu_002',
+            name: 'Sales',
+            icon: 'dollar-sign',
+          },
+          {
+            id: 'menu_003',
+            name: 'Ad Insights',
+            icon: 'bar-chart',
+          },
+        ],
+      }
+      // Responsive Chart
+      const chartDom = document.getElementById('weeklyChartECharts')
+      // Initialize the ECharts instance
+      const myChart = echarts.init(chartDom)
 
+      // ECharts option configuration object
+      const option = {
+        // Configure the grid component to control chart positioning and size within the container
+        grid: {
+          left: '1%',
+          right: '2%',
+          top: '4%',
+          bottom: '0%',
+          containLabel: true,
+        },
+        // Tooltip configuration
+        tooltip: {
+          trigger: 'axis',
+          backgroundColor: 'rgba(40, 40, 40, 0.85)', // Background color
+          textStyle: {
+            color: '#fff', // Text color for tooltip
+          },
+          formatter: function (params) {
+            // Custom formatter to display only the series name and value, hiding the X-axis label
+            let result = ''
+            params.forEach(function (item) {
+              result += item.seriesName + ': ' + item.value
+            })
+            return result
+          },
+          padding: 10,
+          extraCssText: 'border-radius: 6px;',
+        },
+        // X-axis configuration (days of the week)
+        xAxis: {
+          type: 'category',
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          axisLabel: {
+            color: '#707070',
+            fontSize: 13,
+            fontWeight: '400',
+            margin: 10,
+            align: 'center',
+          },
+          axisLine: {
+            show: false,
+          },
+          axisTick: {
+            show: false,
+          },
+          splitLine: {
+            // Grid lines
+            show: true,
+            lineStyle: {
+              color: '#C0C0C0',
+              width: 1,
+              type: 'dashed',
+              dashOffset: 0,
+            },
+          },
+          boundaryGap: true,
+        },
+        // Y-axis configuration
+        yAxis: {
+          type: 'value',
+          min: 0,
+          max: 40,
+          interval: 8,
+          axisLabel: {
+            color: '#707070',
+            fontSize: 13,
+            fontWeight: '400',
+          },
+          axisLine: {
+            show: false,
+          },
+          axisTick: {
+            show: false,
+          },
+          splitLine: {
+            // Grid lines
+            show: true,
+            lineStyle: {
+              color: '#C0C0C0',
+              width: 1,
+              type: 'dashed',
+            },
+          },
+        },
+        // Series configuration (the line chart itself)
+        series: [
+          {
+            name: 'Weekly Trend',
+            type: 'line',
+            data: [20, 5, 20, 18, 34, 10, 12],
+            smooth: 0.6,
+            symbol: 'circle',
+            symbolSize: 8,
+            itemStyle: {
+              color: 'white',
+              borderColor: 'rgba(46, 93, 192, 1)',
+              borderWidth: 1,
+            },
+            lineStyle: {
+              color: 'rgba(46, 93, 192, 1)',
+              width: 1,
+              shadowColor: 'rgba(46, 93, 192, 0.4)',
+              shadowBlur: 3,
+              shadowOffsetX: 0,
+              shadowOffsetY: 4,
+            },
+            areaStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                { offset: 0, color: 'rgba(46, 93, 192, 0.3)' },
+                { offset: 1, color: 'rgba(46, 93, 192, 0.05)' },
+              ]),
+            },
+            emphasis: {
+              itemStyle: {
+                symbolSize: 20,
+                borderWidth: 2,
+              },
+            },
+          },
+        ],
+      }
+
+      // Apply the option configuration to the ECharts instance
+      myChart.setOption(option)
+
+      // Make the chart responsive to window resizing
+      window.addEventListener('resize', function () {
+        myChart.resize()
+      })
+      const completedTodayCount = document.querySelector('#completed-today-count')
+      const completedTodayTrendComparison = document.querySelector('#completed-today-trend-comparison')
+      const earningsAmount = document.querySelector('#earnings-amount')
+      const earningsTrendComparison = document.querySelector('#earnings-trend-comparison')
+      const avgPayoutAmount = document.querySelector('#avgPayout-amount')
+      const avgPayoutTrendComparison = document.querySelector('#avgPayout-trend-comparison')
+      const customerRatingScore = document.querySelector('#customer-rating-score')
+      const customerRatingSatisfaction = document.querySelector('#customer-rating-satisfaction')
+      const newOrderDetails = document.querySelector('#new-orders')
+      const activeOrderDetails = document.querySelector('#active-orders')
+      const creditsAmount = document.querySelector('.credits-amount')
+      const creditsAdded = document.querySelector('.credits-added')
+      const creditsDeducted = document.querySelector('.credits-deducted')
+      const notificationDetails = document.querySelector('#notification-wrapper')
+      const messages = document.querySelector('#message-wrapper')
+      const modal = document.getElementById('myModal')
+      const closeBtn = document.querySelector('.close-button')
+
+      //Function to Update states
+      function updateStats() {
+        if (completedTodayCount) {
+          completedTodayCount.textContent = data.stats.completedToday.count
+        }
+        if (completedTodayTrendComparison) {
+          completedTodayTrendComparison.textContent = `${data.stats.completedToday.trend} ${data.stats.completedToday.comparison} `
+        }
+        if (earningsAmount) {
+          earningsAmount.textContent = `$${data.stats.earnings.amount}`
+          earningsTrendComparison.textContent = `${data.stats.earnings.trend} ${data.stats.earnings.comparison}`
+        }
+        if (avgPayoutAmount) {
+          avgPayoutAmount.textContent = `$${data.stats.avgPayout.amount}`
+        }
+        if (avgPayoutTrendComparison) {
+          avgPayoutTrendComparison.textContent = `${data.stats.avgPayout.trend} ${data.stats.avgPayout.comparison}`
+        }
+        if (customerRatingScore) {
+          customerRatingScore.textContent = data.stats.customerRating.score
+        }
+        if (customerRatingSatisfaction) {
+          customerRatingSatisfaction.textContent = `${data.stats.customerRating.satisfaction} Satisfaction`
+        }
+      }
+      //This function generates required Markup
+      function generateNewOrderMarkup(orderID, restaurant, paymentMethod, distance, time, payout, itemCount, total) {
+        return ` <div class="new-orders-container">
+                  <div class="new-order-details">
+                      <div class="order-info-line--one">
+                          <span class="id-and-restaurant">
+                              <span class="order-id" id="new-order-id" >${orderID}</span>
+                              <span class="restaurant" id="new-order-restaurant" >&nbsp;- ${restaurant}</span>
+                          </span>
+                          <div class="payment-method-${paymentMethod}">
+                              <p class="payment-method-text" id="new-order-payment-method">${paymentMethod}</p>
+                          </div>
+                      </div>
+                      <div class="order-info-line--two">
+                          <span class="order-distance" id="new-order-distance">${distance}</span>
+                          <img src="/images/Ellipse 274.svg" alt="" />
+                          <span class="order-ready-in" id="new-order-ready-in">Ready in ${time}</span>
+                          <img src="/images/Ellipse 274.svg" alt="" />
+                          <span class="order-payout" id="new-order-payout">$${payout}Payout</span>
+                      </div>
+                      <div class="order-info-line--three">
+                          <span id="new-order-item-count">${itemCount} Items</span>
+                          <span id="new-order-total-amount">$${total}</span>
+                      </div>
+                      <div class="order-confirmation">
+                          <button class="accept-btn
+                              ">Accept</button>
+                          <button class="decline-btn">Decline</button>
+                      </div>
+                  </div>
+              </div> `
+      }
+      //  This function fetches data from the object and calls generateMarkup function to display dynamic data
+      function showNewOrderDetails(index) {
+        const ArrayData = data.newOrders[index]
+        const orderID = ArrayData.id
+        const restaurant = ArrayData.restaurant.name
+        const paymentMethod = ArrayData.paymentMethod
+        const distance = ArrayData.restaurant.distance
+        const time = ArrayData.readyIn
+        const payout = ArrayData.payout
+        const itemCount = ArrayData.itemsCount
+        const total = ArrayData.totalAmount
+
+        if (newOrderDetails) {
+          newOrderDetails.innerHTML += generateNewOrderMarkup(orderID, restaurant, paymentMethod, distance, time, payout, itemCount, total)
+        }
+      }
+      //This function generates required Markup
+
+      function generateActiveOrderMarkup(activeOrderId, activeRestaurant, distance, payout) {
+        return `<div class="order-details-wrapper">
+                  <div class="horizontal-line-2"></div>
+                      <div class="active-orders-details">
+                          <div class="active-restaurant-distance">
+                              <span >${activeOrderId}</span>
+                              <span >${activeRestaurant} • ${distance}</span>
+                          </div>
+                          <span class="active-orders-price" >$${payout}</span>
+                      </div>
+                  </div>`
+      }
+      //  This function fetches data from the object and calls generateMarkup function to display dynamic data
+      function showActiveOrderDetails(index) {
+        const ArrayData = data.activeOrders[index]
+        const orderID = ArrayData.id
+        const restaurant = ArrayData.restaurant.name
+        const distance = ArrayData.restaurant.distance
+        const payout = ArrayData.payout
+
+        if (activeOrderDetails) {
+          activeOrderDetails.innerHTML += generateActiveOrderMarkup(orderID, restaurant, distance, payout)
+        }
+      }
+      //  This function fetches data from the object and calls generateMarkup function to display dynamic data
+      function updateCredits() {
+        if (creditsAmount) {
+          creditsAmount.textContent = data.creditHistory[0].available
+        }
+        if (creditsAdded) {
+          creditsAdded.textContent = `+${data.creditHistory[1].amount} credits added today`
+        }
+        if (creditsDeducted) {
+          creditsDeducted.textContent = `12\u00D7 (${data.creditHistory[2].amount} credits deducted)`
+        }
+      }
+      //This function generates required Markup
+
+      function generateNotificationMarkup(title, orderID, amount, time) {
+        return `<div class="notification-details-container">
+                    <div class="horizontal-line"></div>
+                    <div class="notification-details">
+                    <h1 class="order-status">${title}</h1>
+                    <div><span class="order-id-n">#${orderID}</span>
+                        <span class="added-earnings">&nbsp;• $${amount} added to earnings</span>
+                    </div>
+                    <div class="notification-time">${time} min ago</div>
+                </div>
+            </div>`
+      }
+      //  This function fetches data from the object and calls generateMarkup function to display dynamic data
+      function updateNotifications(index) {
+        const ArrayData = data.notifications[index]
+        const title = ArrayData.title
+        const orderID = ArrayData.meta.orderId
+        const amount = ArrayData.meta.amount
+        const time = ArrayData.time
+
+        if (notificationDetails) {
+          notificationDetails.innerHTML += generateNotificationMarkup(title, orderID, amount, time)
+        }
+      }
+      //This function generates required Markup
+
+      function generateMessageMarkup(title, message, time) {
+        return `<div class="messages-details-container">
+                    <div class="horizontal-line"></div>
+                    <div class="messages-details">
+                        <h1 class="sender">${title}</h1>
+                        <div class="message-received">${message}</div>
+                        <div class="messages-time">${time} min ago</div>
+                    </div>
+                </div>`
+      }
+      //  This function fetches data from the object and calls generateMarkup function to display dynamic data
+      function showMessages(index) {
+        const ArrayData = data.notifications[index]
+        const title = ArrayData.title
+        const message = ArrayData.message
+        const time = ArrayData.time
+        if (messages) {
+          messages.innerHTML += generateMessageMarkup(title, message, time)
+        }
+      }
+      // This function calls all the other function that display data dynamically
+
+      function renderFiles() {
+        const openModelBtn = document.querySelectorAll('.accept-btn')
+        // Currently, All these functons are called as per the data object
+        //When Data will be fetched from API, these functions can be called accordingly to display data dynamically
+        //Functions are called in way to maintain the layout as it is in Figma
+        updateStats()
+
+        // //Here, two function calls are made to display only two New Order Containers
+        // //when data will be fetched from API, upon clicking the View All button, then all the orders will be visible
+        showNewOrderDetails(0)
+        showNewOrderDetails(1)
+        //Similar Logic as described in the comment above,When data will be fetched from API, then these individual index calls will be replaced with map method logic
+        showActiveOrderDetails(0)
+        showActiveOrderDetails(1)
+        showActiveOrderDetails(2)
+        showActiveOrderDetails(3)
+        updateCredits()
+        //Exactly same logic here, as currently the data is fetched from the object provided
+        updateNotifications(0)
+        updateNotifications(1)
+        updateNotifications(2)
+        showMessages(3)
+        showMessages(4)
+        showMessages(5)
+
+        //Here, this charts is being updated using the data of the data Object.
+        //When data will be fetched from API, this chart will be rendered to show the data from API
+        myChart.setOption({
+          xAxis: {
+            data: data.weeklyTrend.labels,
+          },
+          series: [
+            {
+              data: data.weeklyTrend.data, // Update the series data
+            },
+          ],
+        })
+
+        function openModal() {
+          modal.classList.add('active')
+        }
+
+        function closeModal() {
+          modal.classList.remove('active')
+        }
+
+        openModelBtn.forEach((btn) => {
+          btn.addEventListener('click', openModal)
+        })
+
+        closeBtn.addEventListener('click', closeModal)
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal()
+          }
+        })
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        renderFiles() // all the functions are called after the DOM Contend has lo
+      })
+    </script>
+  </body>
 </html>
