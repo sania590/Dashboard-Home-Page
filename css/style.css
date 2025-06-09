@@ -1,9 +1,5 @@
 /* Write all your styling in this style.css */
 
-/* 1.1 Global Resets */
-html {
-  font-size: 16px;
-}
 
 /* -----------------------------------------
   RESPONSIVENESS
@@ -176,44 +172,8 @@ html {
   margin-right: 15px;
 }
 
-.order-confirmation {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.accept-btn {
-  background-color: var(--color-primary);
-  color: white;
-  min-width: 221px;
-  height: 36px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  border: none;
-}
-
-.accept-btn:hover,
-.decline-btn:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
-  transition: all 0.1s ease-in-out;
-}
-
-.decline-btn {
-  background-color: #e9ecef;
-  font-weight: 400;
-  min-width: 221px;
-  height: 36px;
-  font-size: 16px;
-  line-height: 100%;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  border: none;
+.half-btn{
+  width: 49%;
 }
 
 .weeklyTrend-and-activeOrders {
@@ -279,13 +239,13 @@ html {
 
 .view-all-btn-2 {
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 100%;
   letter-spacing: 0%;
   color: var(--color-link);
   background: transparent;
   border: none;
-  margin-right: 1.875rem;
+  margin-right: 1rem;
 }
 
 .active-orders-details {
@@ -294,11 +254,11 @@ html {
   justify-content: space-around;
   font-weight: 400;
   margin-left: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 100%;
   letter-spacing: 0%;
-  padding-top: 1.8125rem;
-  padding-bottom: 1.3125rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
   padding-right: 27px;
   padding-left: 30px;
 }
@@ -568,11 +528,7 @@ html {
     gap: 150px; /* Adjust gap for better layout on tablets */
   }
 
-  .accept-btn,
-  .decline-btn {
-    min-width: unset; /* Remove min-width to allow content-based sizing */
-    width: 48%; /* Adjust button width */
-  }
+
 
   .buy-credits-btn {
     margin-left: 21%; /* Center button */
@@ -737,20 +693,7 @@ html {
     margin: 0 1px;
   }
 
-  .order-confirmation {
-    gap: 5px;
-    margin-left: 0;
-    margin-top: 8px;
-  }
 
-  .accept-btn,
-  .decline-btn {
-    min-width: unset;
-    flex: 1;
-    font-size: 13px;
-    padding: 0.35rem 0.6rem;
-    height: 35px;
-  }
 
   .weeklyTrend-and-activeOrders {
     display: flex;
@@ -920,13 +863,13 @@ html {
   }
   .view-all-btn {
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 100%;
     letter-spacing: 0%;
     color: var(--color-link);
     background: transparent;
     border: none;
-    margin-right: 1.875rem;
+    margin-right: 0;
   }
   .new-order--cta {
     display: flex;
@@ -935,7 +878,7 @@ html {
     margin-top: 2.0625rem;
   }
   .new-orders-container {
-    margin-top: 32px;
+    margin-top: 20px;
     min-height: 201px;
     padding: 1.625rem;
   }
@@ -969,16 +912,7 @@ html {
     border-radius: 20px;
     padding: 10px 6px 10px 6px;
   }
-  #weeklyChartECharts:hover {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
-    margin: 0;
-    z-index: 2000;
-    background-color: white;
-    transform: scale(1.05);
-    height: 292px;
-    outline: #1871db solid 1px;
-    transform: translateY(-3px);
-  }
+
 
   .stat-card:hover {
     transform: scale(1.02);
