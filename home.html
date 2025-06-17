@@ -13,14 +13,11 @@
     <link rel="stylesheet" href="css/donotChange.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
 
-      <!-- bootstrap select picker -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!-- bootstrap select picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
   </head>
   <body>
     <div class="container-fluid p-0">
@@ -135,25 +132,25 @@
 
               <!-- Business Overview section -->
 
-              <h1 class="business-overview">Business Overview</h1>
+              <h1 class="dashboard-headings">Business Overview</h1>
               <section class="stats-container">
-                <div class="stat-card">
-                  <h1 class="stat-heading">COMPLETED TODAY</h1>
+                <div class="stat-card dashboard-shadow">
+                  <h2 class="stat-heading">COMPLETED TODAY</h2>
                   <p class="stat-one" id="completed-today-count">30</p>
                   <p class="stat-two" id="completed-today-trend-comparison">+12% From Yesterday</p>
                 </div>
-                <div class="stat-card">
-                  <h1 class="stat-heading">EARNINGS</h1>
+                <div class="stat-card dashboard-shadow">
+                  <h2 class="stat-heading">EARNINGS</h2>
                   <p class="stat-one" id="earnings-amount">$64.50</p>
                   <p class="stat-two" id="earnings-trend-comparison">+15% From Last Week</p>
                 </div>
-                <div class="stat-card">
-                  <h1 class="stat-heading">AVG. PAYOUT</h1>
+                <div class="stat-card dashboard-shadow">
+                  <h2 class="stat-heading">AVG. PAYOUT</h2>
                   <p class="stat-one" id="avgPayout-amount">$7.85</p>
                   <p class="stat-two" id="avgPayout-trend-comparison">+5% Increase</p>
                 </div>
-                <div class="stat-card">
-                  <h1 class="stat-heading">CUSTOMER RATING</h1>
+                <div class="stat-card dashboard-shadow">
+                  <h2 class="stat-heading">CUSTOMER RATING</h2>
                   <p class="stat-one" id="customer-rating-score">4.8</p>
                   <p class="stat-two" id="customer-rating-satisfaction">92% Satisfaction</p>
                 </div>
@@ -162,15 +159,15 @@
               <!-- New Orders sections -->
 
               <div class="new-order--cta">
-                <h1 class="new-orders-heading mb-0">New Orders</h1>
+                <h1 class="dashboard-headings mb-0">New Orders</h1>
                 <button class="view-all-btn">View All</button>
               </div>
               <section class="new-orders-wrapper" id="new-orders"></section>
 
               <!-- Weekly Delivery Trend and Active Orders -->
 
-              <section class="weeklyTrend-and-activeOrders ">
-                <div class="weeklyTrend-container">
+              <section class="weeklyTrend-and-activeOrders">
+                <div class="weeklyTrend-container dashboard-shadow">
                   <h1 class="weeklyTrend-heading">Weekly Delivery Trend</h1>
                   <div class="horizontal-line"></div>
                   <div class="weekly-delivery-trend">
@@ -191,7 +188,7 @@
 
               <!-- Available Credits section -->
               <h1 class="credits-heading">Available Credits</h1>
-              <section class="credits ">
+              <section class="credits">
                 <div class="credit-details">
                   <div class="available-credits">AVAILABLE CREDITS</div>
                   <div class="credits-amount">1,245</div>
@@ -205,13 +202,13 @@
               </section>
 
               <!-- Notifications and Messages section -->
-              <section class="notifications-messages ">
-                <div class="recent-notifications">
+              <section class="notifications-messages">
+                <div class="recent-notifications dashboard-shadow">
                   <h1 class="recent-notification-heading">Recent Notifications</h1>
                   <div id="notification-wrapper"></div>
                 </div>
 
-                <div class="messages">
+                <div class="messages dashboard-shadow">
                   <h1 class="messages-heading">Messages</h1>
                   <div id="message-wrapper"></div>
                 </div>
@@ -258,8 +255,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-     <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
     <!-- Custom JS -->
     <script src="js/donotChangescript.js"></script>
     <script src="js/script.js"></script>
@@ -677,35 +673,35 @@
       }
       //This function generates required Markup
       function generateNewOrderMarkup(orderID, restaurant, paymentMethod, distance, time, payout, itemCount, total) {
-        return ` <div class="new-orders-container">
-                  <div class="new-order-details">
-                      <div class="order-info-line--one">
-                          <span class="id-and-restaurant">
-                              <span class="order-id" id="new-order-id" >${orderID}</span>
-                              <span class="restaurant" id="new-order-restaurant" >&nbsp;- ${restaurant}</span>
-                          </span>
-                          <div class="payment-method-${paymentMethod}">
-                              <p class="payment-method-text" id="new-order-payment-method">${paymentMethod}</p>
+        return ` <div class="new-orders-container dashboard-shadow">
+                      <div class="new-order-details">
+                          <div class="order-info-line--one">
+                              <span class="id-and-restaurant">
+                                  <span class="order-id" id="new-order-id" >${orderID}</span>
+                                  <span class="restaurant" id="new-order-restaurant" >&nbsp;- ${restaurant}</span>
+                              </span>
+                              <div class="payment-method-${paymentMethod}">
+                                  <p class="payment-method-text" id="new-order-payment-method">${paymentMethod}</p>
+                              </div>
                           </div>
+                          <div class="order-info-line--two">
+                              <span class="order-distance" id="new-order-distance">${distance}</span>
+                              <img src="/images/Ellipse 274.svg" alt="" />
+                              <span class="order-ready-in" id="new-order-ready-in">Ready in ${time}</span>
+                              <img src="/images/Ellipse 274.svg" alt="" />
+                              <span class="order-payout" id="new-order-payout">$${payout}Payout</span>
+                          </div>
+                          <div class="order-info-line--three">
+                              <span id="new-order-item-count">${itemCount} Items</span>
+                              <span id="new-order-total-amount">$${total}</span>
+                          </div>
+                         <div class="d-flex justify-content-between">
+        <button class="btn btn-submit half-btn">Accept</button>
+        <button class="btn btn-secondary half-btn">Decline</button>
+      </div>
+
                       </div>
-                      <div class="order-info-line--two">
-                          <span class="order-distance" id="new-order-distance">${distance}</span>
-                          <img src="/images/Ellipse 274.svg" alt="" />
-                          <span class="order-ready-in" id="new-order-ready-in">Ready in ${time}</span>
-                          <img src="/images/Ellipse 274.svg" alt="" />
-                          <span class="order-payout" id="new-order-payout">$${payout}Payout</span>
-                      </div>
-                      <div class="order-info-line--three">
-                          <span id="new-order-item-count">${itemCount} Items</span>
-                          <span id="new-order-total-amount">$${total}</span>
-                      </div>
-                     <div class="d-flex justify-content-between">
-    <button class="btn btn-submit half-btn">Accept</button>
-    <button class="btn btn-secondary half-btn">Decline</button>
-  </div>
-                     
-                  </div>
-              </div> `
+                  </div> `
       }
       //  This function fetches data from the object and calls generateMarkup function to display dynamic data
       function showNewOrderDetails(index) {
@@ -727,15 +723,15 @@
 
       function generateActiveOrderMarkup(activeOrderId, activeRestaurant, distance, payout) {
         return `<div class="order-details-wrapper">
-                  <div class="horizontal-line-2"></div>
-                      <div class="active-orders-details">
-                          <div class="active-restaurant-distance">
-                              <span >${activeOrderId}</span>
-                              <span >${activeRestaurant} • ${distance}</span>
+                      <div class="horizontal-line-2"></div>
+                          <div class="active-orders-details">
+                              <div class="active-restaurant-distance">
+                                  <span >${activeOrderId}</span>
+                                  <span >${activeRestaurant} • ${distance}</span>
+                              </div>
+                              <span class="active-orders-price" >$${payout}</span>
                           </div>
-                          <span class="active-orders-price" >$${payout}</span>
-                      </div>
-                  </div>`
+                      </div>`
       }
       //  This function fetches data from the object and calls generateMarkup function to display dynamic data
       function showActiveOrderDetails(index) {
@@ -765,15 +761,15 @@
 
       function generateNotificationMarkup(title, orderID, amount, time) {
         return `<div class="notification-details-container">
-                    <div class="horizontal-line"></div>
-                    <div class="notification-details">
-                    <h1 class="order-status">${title}</h1>
-                    <div><span class="order-id-n">#${orderID}</span>
-                        <span class="added-earnings">&nbsp;• $${amount} added to earnings</span>
+                        <div class="horizontal-line"></div>
+                        <div class="notification-details">
+                        <h2 class="order-status">${title}</h2>
+                        <div><span class="order-id-n">#${orderID}</span>
+                            <span class="added-earnings">&nbsp;• $${amount} added to earnings</span>
+                        </div>
+                        <div class="notification-time">${time} min ago</div>
                     </div>
-                    <div class="notification-time">${time} min ago</div>
-                </div>
-            </div>`
+                </div>`
       }
       //  This function fetches data from the object and calls generateMarkup function to display dynamic data
       function updateNotifications(index) {
@@ -791,13 +787,13 @@
 
       function generateMessageMarkup(title, message, time) {
         return `<div class="messages-details-container">
-                    <div class="horizontal-line"></div>
-                    <div class="messages-details">
-                        <h1 class="sender">${title}</h1>
-                        <div class="message-received">${message}</div>
-                        <div class="messages-time">${time} min ago</div>
-                    </div>
-                </div>`
+                        <div class="horizontal-line"></div>
+                        <div class="messages-details">
+                            <h2 class="sender">${title}</h2>
+                            <div class="message-received">${message}</div>
+                            <div class="messages-time">${time} min ago</div>
+                        </div>
+                    </div>`
       }
       //  This function fetches data from the object and calls generateMarkup function to display dynamic data
       function showMessages(index) {
@@ -820,8 +816,10 @@
 
         // //Here, two function calls are made to display only two New Order Containers
         // //when data will be fetched from API, upon clicking the View All button, then all the orders will be visible
+
         showNewOrderDetails(0)
         showNewOrderDetails(1)
+
         //Similar Logic as described in the comment above,When data will be fetched from API, then these individual index calls will be replaced with map method logic
         showActiveOrderDetails(0)
         showActiveOrderDetails(1)
@@ -871,7 +869,7 @@
       }
 
       document.addEventListener('DOMContentLoaded', function () {
-        renderFiles() // all the functions are called after the DOM Contend has lo
+        renderFiles() // all the functions are called after the DOM Contend has loaded
       })
     </script>
   </body>
