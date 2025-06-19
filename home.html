@@ -126,13 +126,13 @@
                 <div class="breadcrumb-nav">
                   <a href="#" class="breadcrumb-link">Dashboard</a>
                   <span class="breadcrumb-separator">›</span>
-                  <span class="breadcrumb-current">Menu Manager</span>
+                  <span class="breadcrumb-current">Home</span>
                 </div>
               </div>
 
               <!-- Business Overview section -->
 
-              <h1 class="dashboard-headings">Business Overview</h1>
+              <h1 class="dashboard-headings mt-4 mt-md-0">Business Overview</h1>
               <section class="stats-container">
                 <div class="stat-card dashboard-shadow">
                   <h2 class="stat-heading">COMPLETED TODAY</h2>
@@ -169,6 +169,7 @@
               <section class="weeklyTrend-and-activeOrders">
                 <h1 class="weeklyTrend-heading-mobile">Weekly Delivery Trend</h1>
                 <div class="weeklyTrend-container dashboard-shadow">
+                  <div class="weeklyTrend-container-heading"></div>
                   <h1 class="weeklyTrend-heading">Weekly Delivery Trend</h1>
                   <div class="horizontal-line line-on-mobile"></div>
                   <div class="weekly-delivery-trend">
@@ -370,7 +371,27 @@
             status: 'in_progress',
             pickupTime: '2023-06-02T12:10:00Z',
             deliveryAddress: '101 Cedar Rd',
-          },
+          },{
+            id: 'ADI-S875',
+            restaurant: {
+              name: 'Sushi Zen',
+              distance: '0.5km',
+            },
+            payout: 6.0,
+            status: 'in_progress',
+            pickupTime: '2023-06-02T12:10:00Z',
+            deliveryAddress: '101 Cedar Rd',
+          },{
+            id: 'ADI-S875',
+            restaurant: {
+              name: 'Sushi Zen',
+              distance: '0.5km',
+            },
+            payout: 6.0,
+            status: 'in_progress',
+            pickupTime: '2023-06-02T12:10:00Z',
+            deliveryAddress: '101 Cedar Rd',
+          }
         ],
 
         weeklyTrend: {
@@ -825,6 +846,7 @@
         showActiveOrderDetails(1)
         showActiveOrderDetails(2)
         showActiveOrderDetails(3)
+        showActiveOrderDetails(4)
         updateCredits()
         //Exactly same logic here, as currently the data is fetched from the object provided
         updateNotifications(0)

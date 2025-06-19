@@ -8303,8 +8303,8 @@ div#selection-controls .btn-controls span {
 }
 
 .content-wrapper {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 20px;
+  padding-right: 20px ;
 }
 
 /* Sidebar Styles */
@@ -10703,7 +10703,6 @@ div#selection-controls .btn-controls span {
     justify-content: space-between;
     height: auto;
     min-height: 60px;
-    padding: 8px 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -11712,10 +11711,7 @@ div#selection-controls .btn-controls span {
     padding: 4px 12px;
   }
 
-  .main-header {
-    padding: 8px 5px;
-    /* Keep fixed position from larger breakpoint */
-  }
+
 
   /* Ensure body padding is maintained */
   body {
@@ -11975,10 +11971,7 @@ div#selection-controls .btn-controls span {
 /* Extra small devices */
 @media (max-width: 375px) {
   /* 4.1 Menu Manager - Overview page */
-  .main-header {
-    padding: 6px 4px;
-    /* Keep fixed position from larger breakpoint */
-  }
+
 
   .menu-manager-content {
     padding: 15px 20px 15px 20px;
@@ -12230,10 +12223,7 @@ div#selection-controls .btn-controls span {
 /* Very small devices */
 @media (max-width: 320px) {
   /* 4.1 Menu Manager - Overview page */
-  .main-header {
-    padding: 5px 3px;
-    /* Keep fixed position from larger breakpoint */
-  }
+
 
   /* Adjust body padding for smallest header */
   body {
